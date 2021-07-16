@@ -1,0 +1,136 @@
+
+
+<html>
+	<head>
+		<script>
+			function GEEKFORGEEKS() {
+				var name =
+					document.forms["RegForm"]["Name"];
+				var email =
+					document.forms["RegForm"]["EMail"];
+				var phone =
+					document.forms["RegForm"]["Telephone"];
+				var what =
+					document.forms["RegForm"]["Subject"];
+				var password =
+					document.forms["RegForm"]["Password"];
+				var address =
+					document.forms["RegForm"]["Address"];
+
+				if (name.value == "") {
+					window.alert("Please enter your name.");
+					name.focus();
+					return false;
+				}
+
+				if (address.value == "") {
+					window.alert("Please enter your address.");
+					address.focus();
+					return false;
+				}
+
+				if (email.value == "") {
+					window.alert(
+					"Please enter a valid e-mail address.");
+					email.focus();
+					return false;
+				}
+
+				if (phone.value == "") {
+					window.alert(
+					"Please enter your telephone number.");
+					phone.focus();
+					return false;
+				}
+
+				if (password.value == "") {
+					window.alert("Please enter your password");
+					password.focus();
+					return false;
+				}
+
+				if (what.selectedIndex < 1) {
+					alert("Please enter your course.");
+					what.focus();
+					return false;
+				}
+
+				return true;
+			}
+		</script>
+
+		<style>
+			body{	color:white;
+				background-image: url('i.jpg');
+  				background-repeat: no-repeat;
+  				background-attachment: fixed;  
+  				background-size: cover;
+			}
+			div {
+				box-sizing: border-box;
+				width: 100%;
+				border: 100px solid black;
+				float: left;
+				align-content: center;
+				align-items: center;
+			}
+
+			form {
+				margin: 0 auto;
+				width: 600px;
+			}
+		</style>
+	</head>
+
+	<body>
+		
+		<h1 style="text-align: center;color:white;">Signup</h1>
+		<form name="RegForm" action="/login.html"
+			onsubmit="return GEEKFORGEEKS()" method="post">
+			<p>Name: <input type="text"
+							size="65" name="Name" /></p>
+			<br />
+			
+			<br />
+			<p>E-mail Address: <input type="email"
+							size="65" name="email" /></p>
+			<br />
+			<p>Password: <input type="text"
+						size="65" name="Password" /></p>
+			<br />
+			<p>Telephone: <input type="numbr"
+						size="65" name="Telephone" /></p>
+			<br />
+
+			<p>
+				Photography focused in
+				<select type="text" value="" name="Subject">
+					<option>potraits</option>
+					<option>landscape</option>
+					<option>manipulation</option>
+					<option>modeling</option>
+					<option>beginer</option>
+				</select>
+			</p>
+			<br />
+			<br />
+			
+			<p>
+				<input type="submit"
+					value="send" name="Submit" />
+				<input type="reset"
+					value="Reset" name="Reset" />
+			</p>
+		</form>
+		
+
+	</body>
+
+		<footer class="sub-heading fixed-bottom" style="width: 100%; text-align: center">
+		
+			It is an illusion that photos are made with the camera… they are made with the eye, heart, and head.
+		</footer>
+
+</html>
+
+
